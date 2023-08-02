@@ -21,37 +21,32 @@ After these data cleaning operations, the dataset was reduced to 277 rows, which
 
 ### Exploratory Data Analysis
 
-After some exploratory analysis of the data, we find that there is a big variation between state and ticket price. The total number of numerical features included is 28. Among the features, from the correlation plot, fastQuads, Runs and Snow Making_ac stand out. Of the new features, resort_night_skiing_state_ratioseems the most correlated with ticket price. As well as Runs, total_chairs is quite well correlated with ticket price.
+During the exploratory analysis, we identified significant variations between state and ticket prices. The dataset contains 28 numerical features. Notably, fastQuads, Runs, and Snow Making_ac showed strong correlations. The newly engineered feature resort_night_skiing_state_ratio also exhibited a notable correlation with ticket prices. Additionally, Runs and total_chairs were relatively well-correlated with ticket prices.
 
 ### Model Preprocessing with Feature Engineering
 
-32 features was used in feature engineering. 
-Scaling was applied to the data. 
+For model preparation, we utilized 32 features in the feature engineering process. The data was scaled to ensure numerical stability.
 
 ### Algorithms Used to Build the Model with Evaluation Metric
 
-The metrics to measure performance are: R-squared, MAE(Mean absolute error), MSE(Mean squared error)
+The model performance was evaluated using the following metrics: R-squared, Mean Absolute Error (MAE), and Mean Squared Error (MSE).
 
-A baseline of mean value was created, with a R-squared of 0.
-By using a simple linear regression, we managed to achieve R-squared of over 70%, and mean absolute error 9, which means we are able to estimate the price within 9 dollars of the actual price, and mean_squared_error of 161. With grid search, we discovered the best amount of features to include is 8, and the most important one is vertical of the drop. Then we used cross-validation to estimate the model, the average performance of test split is consistent with the estimate with an average 63% in r squared, and 11 in MAE. Then a random forest model was fit, again cross-validation result yields 71% r squared and 9.5 in MAE. Overall, Random Forest seem to be the best model.
-Features that came up important in the model:
-vertical_drop
-Snow Making_ac
-total_chairs
-fastQuads
-Runs
-LongestRun_mi
-trams
-SkiableTerrain_ac
+A baseline model using the mean value resulted in an R-squared of 0. By employing a simple linear regression, we achieved an R-squared of over 70% and a mean absolute error of 9, indicating that price estimates were within $9 of the actual price. The mean squared error was 161.
+
+Through grid search, we determined that the optimal number of features to include in the model is 8, with "vertical_drop" being the most important. Cross-validation revealed that the model had an average R-squared of 63% and an average MAE of 11. Subsequently, a random forest model was trained and evaluated using cross-validation, resulting in an R-squared of 71% and an MAE of 9.5. Overall, the random forest model outperformed others.
+
+Key features identified as important in the model include: vertical_drop, Snow Making_ac, total_chairs, fastQuads, Runs, LongestRun_mi, trams, and SkiableTerrain_ac.
 
 ### Winning Model and Scenario Modelling
 
-Random forest model as the best model. 
-Scenarios modelled:
-Permanently shutting down up to 10 of the least used runs. This doesn't impact any other resort statistics. - price was expected to drop 1.71 by the 10th run
-Increase the vertical drop by adding a run to a point 150 feet lower down but requiring the installation of an additional chair lift to bring skiers back up, without additional snow making coverage - This scenario increases support for ticket price by $1.99. Over the season, this could be expected to amount to $3474638
-Same as number 2, but adding 2 acres of snow making cover - This scenario increases support for ticket price by $1.99. Over the season, this could be expected to amount to $3474638
-Increase the longest run by 0.2 mile to boast 3.5 miles length, requiring an additional snow making coverage of 4 acres - This scenario causes no difference in the predicted price.
+The winning model was identified as the random forest model based on its superior performance.
+
+Various scenarios were modeled to analyze their impact on ticket prices:
+
+Permanently shutting down up to 10 of the least used runs: Predicted price decrease of $1.71 by the 10th run.
+Increasing the vertical drop by adding a run 150 feet lower down, requiring an additional chair lift: Predicted price increase of $1.99, potentially amounting to $3,474,638 over the season.
+Similar to scenario 2, but adding 2 acres of snow making coverage: Predicted price increase of $1.99, potentially amounting to $3,474,638 over the season.
+Increasing the longest run by 0.2 miles, requiring an additional 4 acres of snow making coverage: No significant difference in the predicted price observed.
 
 ### Pricing Recommendation
 
@@ -59,7 +54,7 @@ Big Mountain Resort modelled price is $94.22 versus actual price is $81.00
 
 ### Conclusion
 
-Additional data that might be required including customer demographics data to predict the actual flow of customers. The model can be implemented on a server and can be retrained and accessed by analysts to generate new predictions given updated data.
+To enhance the model's predictive capabilities, additional data, such as customer demographics, might be required to predict the actual flow of customers. The model can be implemented on a server, retrained, and accessed by analysts to generate new predictions given updated data. Continued optimization and monitoring can provide valuable insights for resort management to make informed pricing decisions and maximize profitability.
 
 ## Pipenv
 

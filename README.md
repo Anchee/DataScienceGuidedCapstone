@@ -3,7 +3,7 @@
 ## Data Science Guided Capstone Project Documentation
 ### Problem Statement
 
-The project aims to solve advise management on the optimal resort prices so that the facilities have higher utilization rate and different facilities can be charged with a different price depending on the importance, to increase profit for the resort, by the end of the season. 
+The project aims to solve advise management on the optimal resort prices so that the facilities have higher utilization rate and different facilities can be charged with a different price depending on the importance, to increase profit for the resort, by the end of the season.  
 
 
 
@@ -21,7 +21,7 @@ After these data cleaning operations, the dataset was reduced to 277 rows, which
 
 ### Exploratory Data Analysis
 
-During the exploratory analysis, we identified significant variations between state and ticket prices. The dataset contains 28 numerical features. Notably, fastQuads, Runs, and Snow Making_ac showed strong correlations. The newly engineered feature resort_night_skiing_state_ratio also exhibited a notable correlation with ticket prices. Additionally, Runs and total_chairs were relatively well-correlated with ticket prices.
+During the exploratory analysis, we identified significant variations between state and ticket prices. The dataset contains 28 numerical features, and 4 textual features. Notably, fastQuads, Runs, and Snow Making_ac showed strong correlations. The newly engineered feature resort_night_skiing_state_ratio also exhibited a notable correlation with ticket prices. Additionally, Runs and total_chairs were relatively well-correlated with ticket prices.
 ![image](https://github.com/Anchee/DataScienceGuidedCapstone/assets/32008044/20cd3b22-05bd-4663-acf5-4049eb46e385)
 
 

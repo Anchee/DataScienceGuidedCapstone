@@ -3,7 +3,7 @@
 ## Data Science Guided Capstone Project Documentation
 ### Problem Statement
 
-The project aims to solve advise management on the optimal resort prices so that the facilities have higher utilization rate and different facilities can be charged with a different price depending on the importance, to increase profit for the resort, by the end of the season. 
+The project aims to solve advise management on the optimal resort prices so that the facilities have higher utilization rate and different facilities can be charged with a different price depending on the importance, to increase profit for the resort, by the end of the season.  
 
 
 

@@ -22,7 +22,8 @@ After these data cleaning operations, the dataset was reduced to 277 rows, which
 ### Exploratory Data Analysis
 
 During the exploratory analysis, we identified significant variations between state and ticket prices. The dataset contains 28 numerical features. Notably, fastQuads, Runs, and Snow Making_ac showed strong correlations. The newly engineered feature resort_night_skiing_state_ratio also exhibited a notable correlation with ticket prices. Additionally, Runs and total_chairs were relatively well-correlated with ticket prices.
-![image](https://github.com/Anchee/DataScienceGuidedCapstone/assets/32008044/d3d51b75-dfb7-4a14-943d-6af7dd73130c)
+![image](https://github.com/Anchee/DataScienceGuidedCapstone/assets/32008044/20cd3b22-05bd-4663-acf5-4049eb46e385)
+
 
 ### Model Preprocessing with Feature Engineering
 
